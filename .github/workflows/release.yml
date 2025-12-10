@@ -25,7 +25,7 @@ permissions:
 
 jobs:
   run-release:
-    uses: powsybl/github-ci/.github/workflows/release-frontend-lib-generic.yml@96788190133f6681f3a28e1e1007d12f236fb45e
+    uses: powsybl/github-ci/.github/workflows/release-frontend-lib-generic.yml@18138659ac87db07d3ca795ec7f1400be5f95374
     with:
       versionType: ${{ github.event.inputs.versionType }}
       nodeAuthToken: ${{ github.event.inputs.nodeAuthToken }}
