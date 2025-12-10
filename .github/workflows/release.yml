@@ -16,6 +16,13 @@ on:
         required: true
         type: string
 
+permissions:
+  contents: write
+  # permission for npm error Provenance generation in GitHub Actions requires "write" access to the "id-token" permission
+  # permission must be reset here otherwise we get the following error:
+  # > The workflow is not valid. Error calling workflow. The workflow is requesting # 'id-token: write', but is only allowed 'id-token: none'.
+  id-token: write
+
 jobs:
   run-release:
     uses: powsybl/github-ci/.github/workflows/release-frontend-lib-generic.yml@4ceb730905a8b32d7f0f77820c0f57598d62cc5d 
